@@ -1,25 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fOS-s4-VpC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="mC0-IF-BDf">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z8z-da-wQT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Itu-Hc-JZc">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sAY-il-uJB" kind="relationship" relationship="viewControllers" id="UvD-El-iHp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psG-NM-gXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="562"/>
+        </scene>
+        <!--TranslucentNavBar-->
+        <scene sceneID="xyg-Sj-oGK">
+            <objects>
+                <viewController id="TSd-XR-K4J" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="UTw-i8-RUD"/>
+                        <viewControllerLayoutGuide type="bottom" id="W53-pU-XUY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8jI-W7-pvL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXk-Qz-85e">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TXk-Qz-85e" firstAttribute="leading" secondItem="8jI-W7-pvL" secondAttribute="leading" id="RmR-Dd-hBA"/>
+                            <constraint firstItem="TXk-Qz-85e" firstAttribute="top" secondItem="8jI-W7-pvL" secondAttribute="top" id="YjJ-hx-nE9"/>
+                            <constraint firstAttribute="trailing" secondItem="TXk-Qz-85e" secondAttribute="trailing" id="qtC-RQ-wzL"/>
+                            <constraint firstAttribute="bottom" secondItem="TXk-Qz-85e" secondAttribute="bottom" id="vPd-Ao-SM3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="TranslucentNavBar" id="TPW-5d-WhW"/>
+                    <connections>
+                        <outlet property="scrollView" destination="TXk-Qz-85e" id="rrR-D3-FEL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwh-y7-RXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3957" y="562"/>
+        </scene>
+        <!--TranslucentTabBar-->
+        <scene sceneID="i75-0W-gxQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sAY-il-uJB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TranslucentTabBar" id="WVk-Qc-NK5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rr9-K3-ShS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TSd-XR-K4J" kind="relationship" relationship="rootViewController" id="ppn-8M-gNo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhT-xG-aAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3145" y="562"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MSq-r9-88G">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="93q-c8-ZHW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Hg5-8u-fOU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ikm-q8-r86" kind="relationship" relationship="viewControllers" id="3nc-57-dcT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGx-Ut-Qde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="1318"/>
+        </scene>
+        <!--OpaqNavBar-->
+        <scene sceneID="bkP-DN-JAg">
+            <objects>
+                <viewController id="q88-IM-EZw" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vsf-5w-ANO"/>
+                        <viewControllerLayoutGuide type="bottom" id="QDB-wA-LQ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sTy-yf-2Nv">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3U-Yo-bXu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y3U-Yo-bXu" firstAttribute="top" secondItem="sTy-yf-2Nv" secondAttribute="top" id="EI8-i8-7W3"/>
+                            <constraint firstItem="Y3U-Yo-bXu" firstAttribute="leading" secondItem="sTy-yf-2Nv" secondAttribute="leading" id="Gku-hM-hF0"/>
+                            <constraint firstAttribute="trailing" secondItem="Y3U-Yo-bXu" secondAttribute="trailing" id="NA1-Ky-knw"/>
+                            <constraint firstAttribute="bottom" secondItem="Y3U-Yo-bXu" secondAttribute="bottom" id="yJT-vc-vQI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="OpaqNavBar" id="BCm-Hy-qeo"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Y3U-Yo-bXu" id="GMR-wI-d3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao6-B8-Nd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3957" y="1318"/>
+        </scene>
+        <!--OpaqueTabBar-->
+        <scene sceneID="eVv-9g-Iyk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ikm-q8-r86" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="OpaqueTabBar" id="9PI-sx-Bdc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KWJ-S3-PLe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q88-IM-EZw" kind="relationship" relationship="rootViewController" id="gzg-eh-Tl8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSH-Gv-EoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3145" y="1318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sbw-h7-msL">
+            <objects>
+                <viewController id="fOS-s4-VpC" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GBB-1w-BVn"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Cx-X1-t5l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8PH-Qb-d7O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ur-Na-RCT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Ur-Na-RCT" secondAttribute="bottom" id="6Cy-Vj-Plh"/>
+                            <constraint firstAttribute="trailing" secondItem="8Ur-Na-RCT" secondAttribute="trailing" id="Dov-6m-Yza"/>
+                            <constraint firstItem="8Ur-Na-RCT" firstAttribute="top" secondItem="8PH-Qb-d7O" secondAttribute="top" id="RWV-Ek-rNS"/>
+                            <constraint firstItem="8Ur-Na-RCT" firstAttribute="leading" secondItem="8PH-Qb-d7O" secondAttribute="leading" id="rG1-NN-Tbx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="8Ur-Na-RCT" id="LQQ-iz-kOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7M-O4-SDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2354" y="-108"/>
         </scene>
     </scenes>
 </document>
