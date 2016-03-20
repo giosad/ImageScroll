@@ -110,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
   self.imageView.center = imageCenter;
 }
 
-
+// Set imageview zoom and position to present the whole image in the scrollview center
 - (void)aspectFitImage {
   CGSize scrollViewSize = [self scrollViewVisibleSize];
   CGSize imageSize = CGRectStandardize(self.imageView.bounds).size;
@@ -139,12 +139,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Return scrollview size without the area overlapping with tab and nav bar.
 - (CGSize) scrollViewVisibleSize {
-  UIEdgeInsets contentInset = self.scrollView.contentInset;
-  CGSize scrollViewSize = CGRectStandardize(self.scrollView.bounds).size;
-  CGFloat width = scrollViewSize.width - contentInset.left - contentInset.right;
-  CGFloat height = scrollViewSize.height - contentInset.top - contentInset.bottom;
-  return CGSizeMake(width, height);
+  return UIEdgeInsetsInsetRect(self.scrollView.bounds, self.scrollView.contentInset).size;
 }
+
 
 @end
 
